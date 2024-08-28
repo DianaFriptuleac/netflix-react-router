@@ -15,7 +15,7 @@ const MovieDetails = () => {
   }, [movieId]);
 
   const fetchMovieDetails = () => {
-    fetchMovieDetails(`http://www.omdbapi.com/?i=${movieId}&apikey=80031566`)
+    fetchMovieDetails(`http://www.omdbapi.com/?i=${movieId}&apikey=5ace13d8`)
       .then((resp) => {
         if (resp.ok) {
           return resp.json();
@@ -25,7 +25,7 @@ const MovieDetails = () => {
       })
       .then((data) => {
         setMovieDetails(data);
-        setIsLoading(true);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.lof("Errore nel recupero dati", err);
@@ -35,7 +35,7 @@ const MovieDetails = () => {
   };
 
   const fetchComments = () => {
-    fetch(`https://example.com/api/movies/${movieId}/comments`)
+    fetch('https://striveschool-api.herokuapp.com/api/comments/:elementId')
       .then((resp) => {
         if (resp.ok) {
           return resp.json();

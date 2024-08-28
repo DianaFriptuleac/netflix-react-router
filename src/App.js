@@ -20,12 +20,10 @@ function App() {
       </header>
      <main>
       <Routes>
-      {/* <ProfilePage/>*/}
-  {/*<SettingsPage/>*/}
   <Route path='/' element={<TvHome/>}/>
   <Route path='/settings' element={<SettingsPage/>}/>
   <Route path='/profile' element={<ProfilePage/>}/>
-  <Route path="/movieDetails:movieId" element={<MovieDetails />} />
+  <Route path="/movieDetails/:movieId" element={<MovieDetails />} />
   <Route path="*" element={<NotFound/>} />
    </Routes>
    </main>
