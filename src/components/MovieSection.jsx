@@ -17,6 +17,7 @@ const MovieSection = ({ saga }) => {
 
   useEffect(() => {
     fetchAllMovies();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [saga]);
 
   //componentDidMount() {

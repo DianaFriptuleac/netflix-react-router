@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const CustomNavbar = function () {
 
   const location = useLocation(); 
+  //classe active per i link
   const addActiveOrNot = (path) => {
     return location.pathname === '/' + path ? 'nav-link active' : 'nav-link'
   }
